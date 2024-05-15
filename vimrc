@@ -10,6 +10,7 @@
 "           https://github.com/amix/vimrc
 "
 " Sections:
+"    -> Upanshu's Additions (Custom)
 "    -> General
 "    -> VIM user interface
 "    -> Colors and Fonts
@@ -35,6 +36,9 @@ set showcmd                 " Show highlighted char counts
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -105,7 +109,7 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-set hlsearch
+" set hlsearch
 
 " Makes search act like search in modern browsers
 set incsearch
@@ -152,7 +156,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme sorbet
 catch
 endtry
 
