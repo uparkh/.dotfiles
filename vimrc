@@ -10,7 +10,6 @@
 "           https://github.com/amix/vimrc
 "
 " Sections:
-"    -> Upanshu's Additions (Custom)
 "    -> General
 "    -> VIM user interface
 "    -> Colors and Fonts
@@ -24,21 +23,9 @@
 "    -> Spell checking
 "    -> Misc
 "    -> Helper functions
+"    -> Upanshu's Additions (Custom)
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Upanshu's Additions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set number                  " Show current line number
-set relativenumber          " Show relative line numbers
-set showcmd                 " Show highlighted char counts
-
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
-nnoremap <C-d> <C-d>zz
-nnoremap <C-u> <C-u>zz
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -398,4 +385,19 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Upanshu's Additions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set number                  " Show current line number
+set relativenumber          " Show relative line numbers
+set showcmd                 " Show highlighted char counts
+
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+hi Normal guibg=NONE ctermbg=NONE
 
