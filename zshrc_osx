@@ -123,7 +123,17 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 function mkcd {
-    command mkdir -p $1 ; cd $1
+    mkdir -p $1 ; cd $1
+}
+function mkz {
+    mkdir -p $1 ; z $1
+}
+
+function findcd {
+    cd $(find $1 -name "*$2*" -type d | head -1)
+}
+function findz {
+    z $(find $1 -name "*$2*" -type d | head -1)
 }
 
 eval "$(zoxide init zsh)"
