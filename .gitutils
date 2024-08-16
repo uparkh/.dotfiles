@@ -1,4 +1,4 @@
-# Helpful aliases
+# Helpful git utils
 alias g="git"
 alias gb="git branch"
 # alias ga="git add"
@@ -14,3 +14,15 @@ alias gcm="git commit -m"
 alias gla="git log"  # git log all
 alias grc="git rebase --continue"
 alias gra="git rebase --abort"
+
+gpo() {
+    local force=${1:-}
+    git push origin "$(git branch --show-current)" $force
+}
+
+upd() {
+    local curbranch=$(git branch --show-current)
+    git checkout master && git pull upstream master && git push origin master
+    git checkout $curbranch
+    git rebase master && git push origin "$curbranch" --force-with-lease
+}
