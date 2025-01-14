@@ -71,8 +71,7 @@ ZSH_THEME="arrow"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize pip python 
-brew vscode)
+plugins=(colored-man-pages colorize pip python brew vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,6 +104,7 @@ alias zshcfg="vim ~/.zshrc"
 alias zshsrc="source ~/.zshrc"
 alias ls="ls -A --color=auto"
 alias ll="ls -goArth --color=auto"
+source "./.gitutils"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
