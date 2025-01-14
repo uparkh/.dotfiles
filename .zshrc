@@ -103,8 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshcfg="vim ~/.zshrc"
 alias zshsrc="source ~/.zshrc"
-alias ls="ls -A"
-alias ll="ls -goArth"
+alias ls="ls -A --color=auto"
+alias ll="ls -goArth --color=auto"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
