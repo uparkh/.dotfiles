@@ -104,7 +104,7 @@ alias zshcfg="vim ~/.zshrc"
 alias zshsrc="source ~/.zshrc"
 alias ls="ls -A --color=auto"
 alias ll="ls -goArth --color=auto"
-source "./.gitutils"
+source ~/.gitutils
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
