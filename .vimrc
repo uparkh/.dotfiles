@@ -393,11 +393,18 @@ set number                  " Show current line number
 set relativenumber          " Show relative line numbers
 set showcmd                 " Show highlighted char counts
 
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
 
-nnoremap <C-d> <C-d>zz
-nnoremap <C-u> <C-u>zz
+let &t_SI = "\e[6 q"        " set cursor to beam on entering Insert mode
+let &t_EI = "\e[2 q"        " set cursor to block on exiting Insert mode
 
+" for centering half page scrolls
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
+
+" for removing term bgs so custom ones can show up
 hi Normal guibg=NONE ctermbg=NONE
+
+" copy to clipboard
+noremap Y "+y
+noremap P "+p
 
